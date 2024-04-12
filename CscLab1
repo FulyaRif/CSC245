@@ -1,0 +1,137 @@
+﻿# CSC245
+import numpy as np
+# Create a rank 2 (2D) array
+array_2d = np.array([[11, 12, 13, 14], [15, 16, 17, 18]])
+print(array_2d)
+
+
+# In[3]:
+
+
+# Create an array with 4 rows and 3 columns of zeros
+zeros_array = np.zeros((4, 3))
+print(zeros_array)
+# Create an array of ones with 3 rows and 4 columns
+ones_array = np.ones((3, 4))
+print(ones_array)
+
+
+# In[4]:
+
+
+# Create an array containing integers 4 to 13 inclusive
+integers_array = np.arange(4, 14)
+print(integers_array)
+
+
+# In[5]:
+
+
+# Create an array containing [0., 1.5, 3., 4.5]
+floats_array = np.array([0., 1.5, 3., 4.5])
+print(floats_array)
+
+
+# In[6]:
+
+
+# Create a 2 by 2 array containing '4' in each position
+fours_array = np.full((2, 2), 4)
+print(fours_array)
+
+
+# In[7]:
+
+
+# Create a 3 by 3 array with random floats in [0, 10]
+random_floats_array = np.random.uniform(0, 10, (3, 3))
+print(random_floats_array)
+
+
+# In[8]:
+
+
+# Create a 3 by 3 array with random integers in [10, 20]
+random_integers_array = np.random.randint(10, 20, (3, 3))
+print(random_integers_array)
+
+
+# In[9]:
+
+
+myArray = np.array([[11, 12, 13], [14, 15, 16], [17, 18, 19]])
+
+# a. Get a subarray of the first row and first 2 columns
+sub_array_a = myArray[0, :2]
+print(sub_array_a)
+
+# b. Change all elements in 1st and second row to 0
+myArray[:2, :] = 0
+print(myArray)
+
+
+# In[10]:
+
+
+reversed_array = np.arange(21)[::-1]
+print(reversed_array)
+
+
+# In[11]:
+
+
+myArray = np.array([[11, 12, 13], [14, 15, 16]])
+
+# Reshape the array to an array with 3 rows
+reshaped_array = myArray.reshape(3, 2)
+print(reshaped_array)
+
+
+# In[12]:
+
+myArray = np.arange(10)
+
+# 1. Find the square of every number in array
+squared_array = np.square(myArray)
+print(squared_array)
+
+# 2. Find the square root of every number in array
+sqrt_array = np.sqrt(myArray)
+print(sqrt_array)
+
+# 3. Multiply the square of each number in array with its respective square root
+result_array = squared_array * sqrt_array
+print(result_array)
+
+
+# In[13]:
+
+
+myArray = np.array([[11, 12, 13], [14, 15, 16], [17, 18, 19]])
+
+# 1. Add a new row of elements containing 20, 21 and 22
+new_row = np.array([20, 21, 22])
+myArray = np.vstack((myArray, new_row))
+print(myArray)
+
+# 2. Add a new column of elements containing 30, 40 and 50
+new_column = np.array([[30], [40], [50]])
+myArray = np.hstack((myArray, new_column))
+print(myArray)
+
+
+# In[14]:
+
+
+myArray = np.zeros((2, 2))
+
+# Add 1 column of 1
+inserted_array = np.insert(myArray, 1, 1, axis=1)
+print(inserted_array)
+
+
+# In[15]:
+
+
+inserted_array = np.insert(inserted_array, 1, 2, axis=0)
+print(inserted_array)
